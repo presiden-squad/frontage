@@ -13,7 +13,38 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/home', function () {
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 
+Route::get('/chart', function () {
+    return view('chart', [
+        "title" => "Chart"
+    ]);
+});
+
+Route::get('/form', function () {
+    return view('form', [
+        "title" => "Forms"
+    ]);
+});
+
+Route::get('/tab-panel', function () {
+    return view('tab-panel', [
+        "title" => "Panels"
+    ]);
+});
+
+Route::get('/table', function () {
+    return view('table', [
+        "title" => "Tables"
+    ]);
+});
+
+Route::get('/ui', function () {
+    return view('ui', [
+        "title" => "UI"
+    ]);
+});
